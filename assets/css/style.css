@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0e17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pemuat {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.pemuat:before,
+.pemuat:after {
+    content: "";
+    height: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        linear-gradient(#a7a9be 0 0) top/100% 40% no-repeat,
+        radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: kedip 1.5s infinite alternate ease-in;
+}
+
+@keyframes kedip {
+
+    0%,
+    70% {
+        background-size: 100% 40%, 8px 8px
+    }
+
+    85% {
+        background-size: 100% 120%, 8px 8px
+    }
+
+    100% {
+        background-size: 100% 40%, 8px 8px
+    }
+}
